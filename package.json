@@ -1,6 +1,6 @@
 {
   "name": "@owsas/aws-queue-ops",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Amazon AWS SQS processing made easy",
   "main": "out/index.js",
   "scripts": {
