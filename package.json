@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --ci --silent",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "Juan Camilo Guarín P",
