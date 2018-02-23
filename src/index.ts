@@ -39,7 +39,10 @@ export class QueueOps {
       params.includeResponsesAndErros : true;
 
     // Create the SQS client
-    this.sqsClient = new AWS.SQS({ region: this.region });
+    this.sqsClient = new AWS.SQS({ 
+      region: this.region, 
+      endpoint: this.queueURL, 
+    });
 
     this.readQueueAndProcess = this.readQueueAndProcess.bind(this);
     this.processSQSBatch = this.processSQSBatch.bind(this);
