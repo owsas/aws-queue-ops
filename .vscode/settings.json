@@ -1,5 +1,6 @@
 {
     "editor.tabSize": 2,
     "tslint.enable": true,
-    "tslint.autoFixOnSave": true
+    "tslint.autoFixOnSave": true,
+    "typescript.tsdk": "{your_global_npm_path}/typescript/lib"
 }

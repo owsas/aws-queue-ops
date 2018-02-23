@@ -5,7 +5,7 @@
   "main": "out/index.js",
   "scripts": {
     "test": "jest --ci --silent",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "watch": "tsc -w",
     "prepublish": "npm run build"
   },
@@ -14,6 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^21.1.4",
+    "@types/node": "^9.4.6",
     "aws-sdk": "^2.201.0",
     "jest": "^21.2.1",
     "ts-jest": "^21.1.3",
