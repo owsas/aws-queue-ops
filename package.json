@@ -48,14 +48,6 @@
       "<rootDir>/out"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/owsas/typescript-module-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/owsas/typescript-module-template/issues"
-  },
-  "homepage": "https://github.com/owsas/typescript-module-template#readme",
   "peerDependencies": {
     "aws-sdk": "^2.201.0"
   }
