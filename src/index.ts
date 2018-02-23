@@ -40,13 +40,18 @@ export class QueueOps {
 
     // Create the SQS client
     this.sqsClient = new AWS.SQS({ region: this.region });
+
+    this.readQueueAndProcess = this.readQueueAndProcess.bind(this);
+    this.processSQSBatch = this.processSQSBatch.bind(this);
+    this.processSQSMessageAndDelete = this.processSQSMessageAndDelete.bind(this);
+    this.deleteMessage = this.deleteMessage.bind(this);
   }
 
   /** 
    * Starts to read the queue in AWS in X groups of Y messages,
    * where X is numParallelJobs and Y is maxNumberOfMessages.
   */
-  readQueueAndProcess = async (): Promise<ISQSWorkResult> => {
+  async readQueueAndProcess(): Promise<ISQSWorkResult> {
     // Start the process
     const start = new Date();
 
@@ -80,7 +85,7 @@ export class QueueOps {
    * Processes one batch of X results from SQS, where X
    * is defined by maxNumberOfMessages
   */
-  processSQSBatch = async (): Promise<ISQSWorkResult> => {
+  async processSQSBatch (): Promise<ISQSWorkResult> {
     // Start the process
     const start = new Date();
     
@@ -132,7 +137,7 @@ export class QueueOps {
    * Processes one SQS Message from the queue
    * @param message
    */
-  processSQSMessageAndDelete = async (message: AWS.SQS.Message): Promise<any> => {
+  async processSQSMessageAndDelete(message: AWS.SQS.Message): Promise<any> {
     // Tell the users to set the function they
     // want to execute
     assert.ok(
@@ -151,8 +156,7 @@ export class QueueOps {
    * be called after it was read and processed
    * @param receiptHandle 
    */
-  deleteMessage = (receiptHandle: string): 
-  Promise<{ $response: AWS.Response<{}, AWS.AWSError>; }> => {
+  deleteMessage (receiptHandle: string): Promise<{ $response: AWS.Response<{}, AWS.AWSError>; }> {
     return this.sqsClient.deleteMessage({
       QueueUrl: this.queueURL,
       ReceiptHandle: receiptHandle,
