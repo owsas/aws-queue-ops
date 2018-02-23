@@ -151,7 +151,9 @@ export class QueueOps {
    * be called after it was read and processed
    * @param receiptHandle 
    */
-  deleteMessage(receiptHandle: string) {
+  deleteMessage(
+    receiptHandle: string,
+  ): Promise<{ $response: AWS.Response<{}, AWS.AWSError>; }> {
     return this.sqsClient.deleteMessage({
       QueueUrl: this.queueURL,
       ReceiptHandle: receiptHandle,
