@@ -1,7 +1,7 @@
 {
-  "name": "typescript-module-template",
+  "name": "@owsas/aws-queue-ops",
   "version": "1.0.0",
-  "description": "A typescript boilerplate to publish modules to npm",
+  "description": "Amazon AWS SQS processing made easy",
   "main": "out/index.js",
   "scripts": {
     "test": "jest --ci --silent",
