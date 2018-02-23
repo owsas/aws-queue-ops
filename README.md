@@ -2,6 +2,8 @@
 
 Amazon AWS SQS processing made easy
 
+Master: [![CircleCI](https://circleci.com/bb/otherwisestudios/queue-ops/tree/master.svg?style=svg&circle-token=76ca7c5a25fb41cc5c42f11d384ca1dce7a5163e)](https://circleci.com/bb/otherwisestudios/queue-ops/tree/master)
+
 <!-- TOC -->
 
 - [AWS Queue Ops](#aws-queue-ops)
