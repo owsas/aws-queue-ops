@@ -1,5 +1,5 @@
 {
-  "name": "@owsas/aws-queue-ops",
+  "name": "aws-queue-ops",
   "version": "1.0.5",
   "description": "Amazon AWS SQS processing made easy",
   "main": "out/index.js",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Juan Camilo Guarín P",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@types/jest": "^21.1.4",
     "@types/node": "^9.4.6",
