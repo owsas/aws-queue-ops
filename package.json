@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "Amazon AWS SQS processing made easy",
   "main": "out/index.js",
+  "types": "out/index.d.ts",
   "scripts": {
     "test": "jest --ci --silent",
     "build": "tsc -p tsconfig.json",
