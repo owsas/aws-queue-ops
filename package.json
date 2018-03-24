@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "Juan Camilo Guarín P",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^21.1.4",
     "@types/node": "^9.4.6",

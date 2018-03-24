@@ -136,5 +136,4 @@ Otherwise SAS, Colombia
 
 ## License 
 
-BSD-3.
-SEE LICENSE FILE
+MIT :)
