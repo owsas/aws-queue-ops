@@ -1,6 +1,6 @@
 {
   "name": "aws-queue-ops",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Amazon AWS SQS processing made easy",
   "main": "out/index.js",
   "types": "out/index.d.ts",
